@@ -132,6 +132,8 @@ With 150 labeled examples, we have sufficient to run a simple grid search across
 
 In practice, the ExtraTreesClassifier with 300 estimators and "sqrt" max features was found to be most effective.
 
+This model gives us a mean accuracy of 57.39%. While this is not particularly high, it should be noted that this is using a small number of labeled examples, and the examples in the labeled set (that we are splitting for train/eval) are some of the "hardest" ones in the overall set. I would expect accuracy across a separate, labeled set to be at least 57.39% providing it matches the same distribution of data.
+
 ### 7. Final Predictions.
 
 The 150 labeled examples along with the optimal hyperparameters found in our small grid search were then used by the "predict.py" script to output a copy of the original "product_data.json" file with the predicted categories included. This output is in the file "product_data_predictions.json"
